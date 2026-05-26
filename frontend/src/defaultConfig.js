@@ -2,7 +2,7 @@
 // Mirrors backend/seed.js defaults so the UI still looks alive.
 export const DEFAULT_CONFIG = {
   main_url: {
-    url: 'https://www.shakehandscreen.com/'
+    url: 'https://www.tiger88.ai/'
   },
   top_bar: {
     enabled: 1,
