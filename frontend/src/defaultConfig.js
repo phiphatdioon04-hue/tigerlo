@@ -5,7 +5,7 @@ export const DEFAULT_CONFIG = {
     url: 'https://www.tiger88.ai/'
   },
   top_bar: {
-    enabled: 1,
+    enabled: 0,
     logo_url: '/logo.webp',
     title: '',
     button_text: 'เข้าสู่ระบบ',

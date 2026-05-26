@@ -16,7 +16,7 @@ if (!existing) {
 upsertRow('main_url', { url: 'https://www.tiger88.ai/' });
 
 upsertRow('top_bar', {
-  enabled: 1,
+  enabled: 0,
   logo_url: '/logo.webp',
   title: '',
   button_text: 'เข้าสู่ระบบ',
