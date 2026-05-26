@@ -23,13 +23,14 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
       ) : null}
       {open ? (
         <div
-          className="absolute left-0 right-0 bottom-0 z-40 px-5 pt-4 pb-7 animate-slide-up safe-bottom"
+          className="absolute left-0 right-0 bottom-0 z-40 px-5 pt-4 animate-slide-up"
           style={{
             background: 'linear-gradient(180deg, #16110a 0%, #0a0e1a 100%)',
             borderTopLeftRadius: 28,
             borderTopRightRadius: 28,
             boxShadow: '0 -25px 60px rgba(245, 158, 11, 0.25)',
-            borderTop: '1px solid rgba(245, 158, 11, 0.28)'
+            borderTop: '1px solid rgba(245, 158, 11, 0.28)',
+            paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 2.5rem)'
           }}
         >
           <div className="w-12 h-1.5 rounded-full bg-white/15 mx-auto mb-4" />

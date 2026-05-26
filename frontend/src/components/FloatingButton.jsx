@@ -16,11 +16,11 @@ export default function FloatingButton({ config, onAction }) {
   if (!config?.enabled) return null;
   const pos = config.position || 'bottom-right';
   const posClass =
-    pos === 'bottom-center' ? 'left-1/2 -translate-x-1/2 bottom-6'
-    : pos === 'bottom-left' ? 'left-4 bottom-6'
-    : 'right-4 bottom-6';
+    pos === 'bottom-center' ? 'left-1/2 -translate-x-1/2'
+    : pos === 'bottom-left' ? 'left-4'
+    : 'right-4';
 
-  const color = config.color || '#a855f7';
+  const color = config.color || '#f59e0b';
 
   return (
     <button
@@ -28,7 +28,8 @@ export default function FloatingButton({ config, onAction }) {
       className={`absolute z-20 ${posClass} px-4 py-3 rounded-full text-white font-semibold text-sm flex items-center gap-2 active:scale-95 transition`}
       style={{
         background: `linear-gradient(135deg, ${color}, ${shade(color, -28)})`,
-        boxShadow: `0 14px 32px ${color}77, 0 0 0 1px ${color}44 inset`
+        boxShadow: `0 14px 32px ${color}77, 0 0 0 1px ${color}44 inset`,
+        bottom: 'calc(env(safe-area-inset-bottom, 0px) + 1.75rem)'
       }}
     >
       {config.icon ? <span className="text-base leading-none">{config.icon}</span> : null}
