@@ -1,0 +1,13 @@
+{
+  "name": "Neon App",
+  "short_name": "Neon",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b0118",
+  "theme_color": "#0b0118",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
