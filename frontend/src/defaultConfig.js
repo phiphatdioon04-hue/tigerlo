@@ -22,11 +22,11 @@ export const DEFAULT_CONFIG = {
     title: 'ยินดีต้อนรับสู่ TIGER',
     subtitle: 'เข้าสู่ระบบหรือสมัครสมาชิกเพื่อรับโบนัสต้อนรับ',
     login_text: 'เข้าสู่ระบบ',
-    login_url: 'https://example.com/login',
+    login_url: 'https://lin.ee/6YTRdbw',
     register_text: 'สมัครสมาชิก',
-    register_url: 'https://example.com/register',
+    register_url: 'https://lin.ee/6YTRdbw',
     primary_text: 'รับโบนัสเลย',
-    primary_url: 'https://example.com/bonus',
+    primary_url: 'https://lin.ee/6YTRdbw',
     phone_field_enabled: 1
   },
   floating_button: {

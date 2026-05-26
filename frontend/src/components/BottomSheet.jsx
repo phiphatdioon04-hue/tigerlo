@@ -71,7 +71,7 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
 
           {config.primary_text ? (
             <button
-              onClick={() => onAction('iframe', appendPhone(config.primary_url))}
+              onClick={() => onAction('newtab', appendPhone(config.primary_url))}
               className="w-full py-3.5 rounded-2xl text-white font-semibold mb-2.5 active:scale-[0.98] transition"
               style={{
                 background: `linear-gradient(135deg, ${theme.primary_color || '#f59e0b'}, ${theme.button_color || '#d97706'})`,
@@ -85,7 +85,7 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
           <div className="grid grid-cols-2 gap-2.5">
             {config.login_text ? (
               <button
-                onClick={() => onAction('iframe', config.login_url)}
+                onClick={() => onAction('newtab', config.login_url)}
                 className="py-3 rounded-2xl bg-white/5 border border-white/10 text-white text-sm font-medium active:scale-[0.98] transition"
               >
                 {config.login_text}
@@ -93,7 +93,7 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
             ) : null}
             {config.register_text ? (
               <button
-                onClick={() => onAction('iframe', config.register_url)}
+                onClick={() => onAction('newtab', config.register_url)}
                 className="py-3 rounded-2xl text-white text-sm font-medium active:scale-[0.98] transition"
                 style={{
                   background: 'rgba(20, 184, 166, 0.18)',
