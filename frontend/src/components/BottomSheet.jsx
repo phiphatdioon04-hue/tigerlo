@@ -36,7 +36,11 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
 
           <div className="flex items-center gap-3 mb-5">
             {config.logo_url ? (
-              <img src={config.logo_url} alt="" className="w-11 h-11 rounded-2xl shadow-lg" />
+              <img
+                src={config.logo_url}
+                alt=""
+                className="h-11 w-auto max-w-[180px] object-contain"
+              />
             ) : null}
             <div className="flex-1 min-w-0">
               <div className="text-white font-semibold text-base truncate">{config.title || 'ยินดีต้อนรับ'}</div>

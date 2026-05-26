@@ -17,8 +17,8 @@ upsertRow('main_url', { url: 'https://www.shakehandscreen.com/' });
 
 upsertRow('top_bar', {
   enabled: 1,
-  logo_url: '/icon.svg',
-  title: 'TIGER',
+  logo_url: '/logo.webp',
+  title: '',
   button_text: 'เข้าสู่ระบบ',
   button_url: '',
   button_color: '#14b8a6',
@@ -30,7 +30,7 @@ upsertRow('bottom_sheet', {
   auto_show: 1,
   delay_ms: 1500,
   show_once: 1,
-  logo_url: '/icon.svg',
+  logo_url: '/logo.webp',
   title: 'ยินดีต้อนรับสู่ TIGER',
   subtitle: 'เข้าสู่ระบบหรือสมัครสมาชิกเพื่อรับโบนัสต้อนรับ',
   login_text: 'เข้าสู่ระบบ',

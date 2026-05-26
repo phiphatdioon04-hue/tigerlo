@@ -6,11 +6,17 @@ export default function TopBar({ config, theme, onAction }) {
     >
       <div className="flex items-center gap-2.5 min-w-0">
         {config.logo_url ? (
-          <img src={config.logo_url} alt="" className="w-9 h-9 rounded-xl shadow-lg" />
+          <img
+            src={config.logo_url}
+            alt=""
+            className="h-9 w-auto max-w-[160px] object-contain"
+          />
         ) : null}
-        <div className="text-white text-sm font-semibold tracking-wide truncate">
-          {config.title || ''}
-        </div>
+        {config.title ? (
+          <div className="text-white text-sm font-semibold tracking-wide truncate">
+            {config.title}
+          </div>
+        ) : null}
       </div>
       {config.button_text ? (
         <button
