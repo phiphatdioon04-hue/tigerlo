@@ -72,7 +72,7 @@ export default function App() {
   return (
     <div
       className="min-h-[100dvh] w-full flex items-center justify-center"
-      style={{ background: 'linear-gradient(135deg, #0b0118 0%, #16032b 50%, #2a0a4d 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #0a0e1a 0%, #1a1408 50%, #3d2a0a 100%)' }}
     >
       <div
         className="relative w-full max-w-[430px] h-[100dvh] md:h-[92dvh] md:max-h-[920px] overflow-hidden md:my-4 flex flex-col"
@@ -80,8 +80,8 @@ export default function App() {
           background: theme.bg_color || '#0b0118',
           color: theme.text_color || '#fff',
           borderRadius: rounded,
-          boxShadow: theme.shadow || '0 25px 70px rgba(168, 85, 247, 0.4)',
-          border: rounded ? '1px solid rgba(168, 85, 247, 0.15)' : 'none',
+          boxShadow: theme.shadow || '0 25px 70px rgba(245, 158, 11, 0.3)',
+          border: rounded ? '1px solid rgba(245, 158, 11, 0.18)' : 'none',
           fontFamily: theme.font || undefined
         }}
       >

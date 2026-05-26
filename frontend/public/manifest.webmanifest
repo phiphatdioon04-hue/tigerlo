@@ -1,11 +1,11 @@
 {
-  "name": "Neon App",
-  "short_name": "Neon",
+  "name": "TIGER",
+  "short_name": "TIGER",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0b0118",
-  "theme_color": "#0b0118",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
   "orientation": "portrait",
   "icons": [
     { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }

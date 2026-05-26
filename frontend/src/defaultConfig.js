@@ -7,11 +7,11 @@ export const DEFAULT_CONFIG = {
   top_bar: {
     enabled: 1,
     logo_url: '/icon.svg',
-    title: 'NEON APP',
-    button_text: 'ติดตั้ง',
+    title: 'TIGER',
+    button_text: 'เข้าสู่ระบบ',
     button_url: '',
-    button_color: '#a855f7',
-    button_action: 'install'
+    button_color: '#14b8a6',
+    button_action: 'sheet'
   },
   bottom_sheet: {
     enabled: 1,
@@ -19,44 +19,44 @@ export const DEFAULT_CONFIG = {
     delay_ms: 1500,
     show_once: 1,
     logo_url: '/icon.svg',
-    title: 'ยินดีต้อนรับ',
-    subtitle: 'เข้าสู่ระบบหรือสมัครสมาชิกเพื่อใช้งานทุกฟีเจอร์',
+    title: 'ยินดีต้อนรับสู่ TIGER',
+    subtitle: 'เข้าสู่ระบบหรือสมัครสมาชิกเพื่อรับโบนัสต้อนรับ',
     login_text: 'เข้าสู่ระบบ',
     login_url: 'https://example.com/login',
     register_text: 'สมัครสมาชิก',
     register_url: 'https://example.com/register',
-    primary_text: 'ต่อไป',
-    primary_url: 'https://example.com/start',
+    primary_text: 'รับโบนัสเลย',
+    primary_url: 'https://example.com/bonus',
     phone_field_enabled: 1
   },
   floating_button: {
     enabled: 1,
-    text: 'สมัครเลย',
+    text: 'สมัครรับโบนัส',
     icon: '🎁',
     url: 'https://example.com/promo',
     action: 'iframe',
     position: 'bottom-right',
-    color: '#a855f7'
+    color: '#f59e0b'
   },
   theme: {
-    bg_color: '#0b0118',
-    primary_color: '#a855f7',
-    button_color: '#7c3aed',
+    bg_color: '#0a0e1a',
+    primary_color: '#f59e0b',
+    button_color: '#14b8a6',
     text_color: '#ffffff',
     border_radius: 28,
-    shadow: '0 25px 70px rgba(168, 85, 247, 0.4)',
+    shadow: '0 25px 70px rgba(245, 158, 11, 0.28)',
     font: 'Inter, system-ui, sans-serif',
     rounded_frame: 1
   },
   pwa: {
-    site_name: 'Neon App',
-    short_name: 'Neon',
-    manifest_name: 'Neon App',
-    splash_color: '#0b0118',
+    site_name: 'TIGER',
+    short_name: 'TIGER',
+    manifest_name: 'TIGER',
+    splash_color: '#0a0e1a',
     install_prompt_enabled: 1
   },
   settings: {
-    site_title: 'Neon App',
-    meta_description: 'Mobile web app wrapper'
+    site_title: 'TIGER',
+    meta_description: 'Mobile web app'
   }
 };

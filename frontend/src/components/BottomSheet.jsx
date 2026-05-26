@@ -25,11 +25,11 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
         <div
           className="absolute left-0 right-0 bottom-0 z-40 px-5 pt-4 pb-7 animate-slide-up safe-bottom"
           style={{
-            background: 'linear-gradient(180deg, #1a0530 0%, #0b0118 100%)',
+            background: 'linear-gradient(180deg, #16110a 0%, #0a0e1a 100%)',
             borderTopLeftRadius: 28,
             borderTopRightRadius: 28,
-            boxShadow: '0 -25px 60px rgba(168, 85, 247, 0.35)',
-            borderTop: '1px solid rgba(168, 85, 247, 0.25)'
+            boxShadow: '0 -25px 60px rgba(245, 158, 11, 0.25)',
+            borderTop: '1px solid rgba(245, 158, 11, 0.28)'
           }}
         >
           <div className="w-12 h-1.5 rounded-full bg-white/15 mx-auto mb-4" />
@@ -59,7 +59,7 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
                 placeholder="เบอร์โทรศัพท์"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-4 py-3.5 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-white/40 outline-none focus:border-fuchsia-500/60 transition"
+                className="w-full px-4 py-3.5 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-white/40 outline-none focus:border-amber-400/60 transition"
               />
             </div>
           ) : null}
@@ -69,8 +69,8 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
               onClick={() => onAction('iframe', appendPhone(config.primary_url))}
               className="w-full py-3.5 rounded-2xl text-white font-semibold mb-2.5 active:scale-[0.98] transition"
               style={{
-                background: `linear-gradient(135deg, ${theme.primary_color || '#a855f7'}, ${theme.button_color || '#7c3aed'})`,
-                boxShadow: `0 12px 32px ${(theme.primary_color || '#a855f7')}66`
+                background: `linear-gradient(135deg, ${theme.primary_color || '#f59e0b'}, ${theme.button_color || '#d97706'})`,
+                boxShadow: `0 12px 32px ${(theme.primary_color || '#f59e0b')}66`
               }}
             >
               {config.primary_text}
@@ -91,8 +91,8 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
                 onClick={() => onAction('iframe', config.register_url)}
                 className="py-3 rounded-2xl text-white text-sm font-medium active:scale-[0.98] transition"
                 style={{
-                  background: 'rgba(168, 85, 247, 0.18)',
-                  border: '1px solid rgba(168, 85, 247, 0.45)'
+                  background: 'rgba(20, 184, 166, 0.18)',
+                  border: '1px solid rgba(20, 184, 166, 0.45)'
                 }}
               >
                 {config.register_text}

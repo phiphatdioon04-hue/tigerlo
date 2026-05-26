@@ -27,16 +27,16 @@ export default function WebView({ url, theme }) {
     <div className="relative flex-1 overflow-hidden bg-black">
       {loading ? (
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none"
-          style={{ background: theme.bg_color || '#0b0118' }}>
+          style={{ background: theme.bg_color || '#0a0e1a' }}>
           <div className="flex flex-col items-center gap-3">
-            <div className="w-10 h-10 rounded-full border-2 border-white/15 border-t-fuchsia-400 animate-spin" />
+            <div className="w-10 h-10 rounded-full border-2 border-white/15 border-t-amber-400 animate-spin" />
             <div className="text-white/40 text-xs">กำลังโหลด...</div>
           </div>
         </div>
       ) : null}
       {error ? (
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 px-6 text-center"
-          style={{ background: theme.bg_color || '#0b0118' }}>
+          style={{ background: theme.bg_color || '#0a0e1a' }}>
           <div className="text-3xl">⚠️</div>
           <div className="text-white/80 text-sm">ไม่สามารถโหลดเนื้อหาได้</div>
           <div className="text-white/40 text-xs">เว็บปลายทางอาจบล็อก iframe — ลองเปิดในเบราว์เซอร์</div>
