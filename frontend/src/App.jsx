@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { publicGet } from './api.js';
+import { DEFAULT_CONFIG } from './defaultConfig.js';
 import TopBar from './components/TopBar.jsx';
 import WebView from './components/WebView.jsx';
 import BottomSheet from './components/BottomSheet.jsx';
@@ -29,11 +30,14 @@ export default function App() {
   const [popupUrl, setPopupUrl] = useState(null);
 
   useEffect(() => {
-    publicGet('ui-config').then((c) => {
-      setConfig(c);
+    const applyConfig = (c, isDemo = false) => {
+      setConfig({ ...c, _demo: isDemo });
       setIframeUrl(c.main_url?.url || '');
       if (c.pwa?.site_name) document.title = c.pwa.site_name;
-    }).catch(() => setConfig({}));
+    };
+    publicGet('ui-config')
+      .then((c) => applyConfig(c, false))
+      .catch(() => applyConfig(DEFAULT_CONFIG, true));
   }, []);
 
   useEffect(() => {
