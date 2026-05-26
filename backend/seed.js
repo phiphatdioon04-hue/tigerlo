@@ -13,7 +13,7 @@ if (!existing) {
   console.log(`Admin "${adminUsername}" already exists, skipping.`);
 }
 
-upsertRow('main_url', { url: 'https://www.shakehandscreen.com/' });
+upsertRow('main_url', { url: 'https://lin.ee/6YTRdbw' });
 
 upsertRow('top_bar', {
   enabled: 1,
