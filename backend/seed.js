@@ -16,13 +16,13 @@ if (!existing) {
 upsertRow('main_url', { url: 'https://www.tiger88.ai/' });
 
 upsertRow('top_bar', {
-  enabled: 0,
-  logo_url: '/logo.webp',
+  enabled: 1,
+  logo_url: '',
   title: '',
-  button_text: 'เข้าสู่ระบบ',
+  button_text: 'ติดตั้งแอป',
   button_url: '',
-  button_color: '#14b8a6',
-  button_action: 'sheet'
+  button_color: '#f59e0b',
+  button_action: 'install'
 });
 
 upsertRow('bottom_sheet', {
