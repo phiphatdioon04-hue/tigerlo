@@ -42,22 +42,32 @@ app.get('/api/public/ui-config', (_req, res) => {
 app.get('/manifest.webmanifest', (_req, res) => {
   const pwa = getRow('pwa_settings') || {};
   const theme = getRow('theme') || {};
+  const settings = getRow('settings') || {};
+  const iconSrc = pwa.app_icon_url || '/icon.svg';
+  const iconType = iconSrc.endsWith('.png') ? 'image/png'
+    : iconSrc.endsWith('.webp') ? 'image/webp'
+    : 'image/svg+xml';
   res.json({
+    id: '/',
     name: pwa.manifest_name || pwa.site_name || 'App',
     short_name: pwa.short_name || 'App',
+    description: settings.meta_description || 'Mobile web app',
     start_url: '/',
     scope: '/',
     display: 'standalone',
-    background_color: pwa.splash_color || theme.bg_color || '#0b0118',
-    theme_color: pwa.splash_color || theme.bg_color || '#0b0118',
+    display_override: ['standalone', 'fullscreen'],
+    background_color: pwa.splash_color || theme.bg_color || '#0a0e1a',
+    theme_color: pwa.splash_color || theme.bg_color || '#0a0e1a',
     orientation: 'portrait',
+    lang: 'th',
+    dir: 'ltr',
+    categories: ['entertainment', 'games', 'lifestyle'],
+    prefer_related_applications: false,
     icons: [
-      {
-        src: pwa.app_icon_url || '/icon.svg',
-        sizes: 'any',
-        type: pwa.app_icon_url && pwa.app_icon_url.endsWith('.png') ? 'image/png' : 'image/svg+xml',
-        purpose: 'any maskable'
-      }
+      { src: iconSrc, sizes: 'any', type: iconType, purpose: 'any' },
+      { src: iconSrc, sizes: '192x192', type: iconType, purpose: 'any' },
+      { src: iconSrc, sizes: '512x512', type: iconType, purpose: 'any' },
+      { src: iconSrc, sizes: '512x512', type: iconType, purpose: 'maskable' }
     ]
   });
 });
