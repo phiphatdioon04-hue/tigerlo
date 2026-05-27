@@ -2,14 +2,16 @@ import { useState } from 'react';
 
 function trackContact(source, extra = {}) {
   try {
-    if (typeof window !== 'undefined' && window.ttq) {
-      window.ttq.track('Contact', {
-        content_id: source,
-        content_type: 'line_add_friend',
-        description: `Bottom sheet ${source} button clicked`,
-        ...extra
-      });
-    }
+    if (typeof window === 'undefined' || !window.ttq) return;
+    const params = {
+      content_id: source,
+      content_type: 'line_add_friend',
+      description: `Bottom sheet ${source} button clicked`,
+      ...extra
+    };
+    // Fire both events so either can be selected as optimization goal in TikTok Ads
+    window.ttq.track('Contact', params);
+    window.ttq.track('ClickButton', params);
   } catch { /* no-op */ }
 }
 
