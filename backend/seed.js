@@ -29,7 +29,7 @@ upsertRow('bottom_sheet', {
   enabled: 1,
   auto_show: 1,
   delay_ms: 1500,
-  show_once: 1,
+  show_once: 0,
   logo_url: '/logo.webp',
   title: 'ยินดีต้อนรับสู่ TIGER',
   subtitle: 'เข้าสู่ระบบหรือสมัครสมาชิกเพื่อรับโบนัสต้อนรับ',
@@ -46,8 +46,8 @@ upsertRow('floating_button', {
   enabled: 1,
   text: 'สมัครรับโบนัส',
   icon: '🎁',
-  url: 'https://example.com/promo',
-  action: 'iframe',
+  url: '',
+  action: 'sheet',
   position: 'bottom-right',
   color: '#f59e0b'
 });
