@@ -1,5 +1,18 @@
 import { useState } from 'react';
 
+function trackContact(source, extra = {}) {
+  try {
+    if (typeof window !== 'undefined' && window.ttq) {
+      window.ttq.track('Contact', {
+        content_id: source,
+        content_type: 'line_add_friend',
+        description: `Bottom sheet ${source} button clicked`,
+        ...extra
+      });
+    }
+  } catch { /* no-op */ }
+}
+
 export default function BottomSheet({ open, onClose, config, theme, onAction }) {
   const [phone, setPhone] = useState('');
   if (!config?.enabled) return null;
@@ -73,6 +86,7 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
               href={appendPhone(config.primary_url) || '#'}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackContact('primary_cta', { button_text: config.primary_text, has_phone: !!phone })}
               className="block w-full py-3.5 rounded-2xl text-white font-semibold mb-2.5 active:scale-[0.98] transition text-center"
               style={{
                 background: `linear-gradient(135deg, ${theme.primary_color || '#f59e0b'}, ${theme.button_color || '#d97706'})`,
@@ -89,6 +103,7 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
                 href={config.login_url || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackContact('login', { button_text: config.login_text })}
                 className="block text-center py-3 rounded-2xl bg-white/5 border border-white/10 text-white text-sm font-medium active:scale-[0.98] transition"
               >
                 {config.login_text}
@@ -99,6 +114,7 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
                 href={config.register_url || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackContact('register', { button_text: config.register_text })}
                 className="block text-center py-3 rounded-2xl text-white text-sm font-medium active:scale-[0.98] transition"
                 style={{
                   background: 'rgba(20, 184, 166, 0.18)',
