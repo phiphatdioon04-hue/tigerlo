@@ -33,8 +33,7 @@ export default function InstallBanner({ logo, appName = 'TIGER' }) {
     try {
       if (sessionStorage.getItem('install_banner_dismissed')) return;
     } catch {}
-    const t = setTimeout(() => setVisible(true), 4000);
-    return () => clearTimeout(t);
+    setVisible(true);
   }, []);
 
   const handleInstall = async () => {
