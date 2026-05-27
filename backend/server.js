@@ -43,10 +43,6 @@ app.get('/manifest.webmanifest', (_req, res) => {
   const pwa = getRow('pwa_settings') || {};
   const theme = getRow('theme') || {};
   const settings = getRow('settings') || {};
-  const iconSrc = pwa.app_icon_url || '/icon.svg';
-  const iconType = iconSrc.endsWith('.png') ? 'image/png'
-    : iconSrc.endsWith('.webp') ? 'image/webp'
-    : 'image/svg+xml';
   res.json({
     id: '/',
     name: pwa.manifest_name || pwa.site_name || 'App',
@@ -64,10 +60,14 @@ app.get('/manifest.webmanifest', (_req, res) => {
     categories: ['entertainment', 'games', 'lifestyle'],
     prefer_related_applications: false,
     icons: [
-      { src: iconSrc, sizes: 'any', type: iconType, purpose: 'any' },
-      { src: iconSrc, sizes: '192x192', type: iconType, purpose: 'any' },
-      { src: iconSrc, sizes: '512x512', type: iconType, purpose: 'any' },
-      { src: iconSrc, sizes: '512x512', type: iconType, purpose: 'maskable' }
+      { src: '/icons/launchericon-48x48.png',   sizes: '48x48',   type: 'image/png', purpose: 'any' },
+      { src: '/icons/launchericon-72x72.png',   sizes: '72x72',   type: 'image/png', purpose: 'any' },
+      { src: '/icons/launchericon-96x96.png',   sizes: '96x96',   type: 'image/png', purpose: 'any' },
+      { src: '/icons/launchericon-144x144.png', sizes: '144x144', type: 'image/png', purpose: 'any' },
+      { src: '/icons/launchericon-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+      { src: '/icons/launchericon-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+      { src: '/icons/launchericon-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'maskable' },
+      { src: '/icons/launchericon-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
     ]
   });
 });
