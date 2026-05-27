@@ -6,6 +6,7 @@ import WebView from './components/WebView.jsx';
 import BottomSheet from './components/BottomSheet.jsx';
 import FloatingButton from './components/FloatingButton.jsx';
 import Loading from './components/Loading.jsx';
+import InstallBanner from './components/InstallBanner.jsx';
 
 let deferredInstall = null;
 if (typeof window !== 'undefined') {
@@ -90,6 +91,11 @@ export default function App() {
         ) : null}
 
         <WebView url={iframeUrl} theme={theme} />
+
+        <InstallBanner
+          logo={config.pwa?.app_icon_url || config.top_bar?.logo_url || '/logo.webp'}
+          appName={config.pwa?.site_name || 'TIGER'}
+        />
 
         {config.floating_button?.enabled ? (
           <FloatingButton config={config.floating_button} onAction={handleAction} />
