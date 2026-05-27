@@ -17,8 +17,7 @@ export default function BottomSheet({ open, onClose, config, theme, onAction }) 
     <>
       {open ? (
         <div
-          className="absolute inset-0 z-30 bg-black/35 animate-fade-in"
-          onClick={onClose}
+          className="absolute inset-0 z-30 bg-black/25 animate-fade-in pointer-events-none"
         />
       ) : null}
       {open ? (
