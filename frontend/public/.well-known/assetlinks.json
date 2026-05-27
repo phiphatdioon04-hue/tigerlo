@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "app.vercel.tigerlo.twa",
+    "sha256_cert_fingerprints": ["64:BA:A7:64:15:5B:09:92:FD:02:FB:DB:73:72:7C:FD:AB:50:25:54:E7:72:D5:D8:51:9C:01:E5:F6:2F:89:EF"]
+  }
+}]
